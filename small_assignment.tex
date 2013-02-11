@@ -1,0 +1,46 @@
+%% Pakolliset settarit ja paketit
+\documentclass[finnish,12pt,a4paper,pdftex]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[pdfpagemode=UseNone,colorlinks=true,urlcolor=black,%
+    linkcolor=black,citecolor=black,pdfstartview=FitH]{hyperref}
+\usepackage{amsfonts,amssymb,amsbsy}
+\usepackage{todonotes}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+%% Työn tiedot
+\newcommand{\nimi}[0] {First Last}
+\newcommand{\opnro}[0] {student id}
+\newcommand{\kurssi}[0] {course code and name}
+\newcommand{\tehtava}[0] {assignment title}
+\newcommand{\emai}[0] {your@email.address}
+
+%% Headerin asettaminen
+\lhead{\fancyplain{} {\kurssi\\
+    \tehtava}}
+\chead{\fancyplain{} {\thepage (\pageref{LastPage})}}
+\rhead{\fancyplain{} {\nimi\ \opnro\\
+                    \emai}}
+\cfoot{\fancyplain{}}
+
+\begin{document}
+
+%% Kansilehti
+\thispagestyle{empty}
+\begin{center}
+    \LARGE{\kurssi}\\[3 cm]
+    \Large{\tehtava}\\[3 cm]
+    \small{\nimi\ \opnro}\\[9 cm]
+    \today
+\end{center}
+
+%% Header lopuille sivuille. Kansilehteä ei lasketa sivunumeroissa.
+\newpage
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+%% Vapaa sisältö, anna palaa Jack
+
+
+\end{document}
